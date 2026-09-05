@@ -1,0 +1,1 @@
+- **Mobile First**: All UI/UX beautification and design changes must be approached with a mobile-first philosophy.

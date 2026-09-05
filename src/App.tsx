@@ -8,6 +8,7 @@ import { FAQ } from './sections/FAQ';
 import { CTA } from './sections/CTA';
 import { Terms } from './sections/Terms';
 import { Footer } from './layout/Footer';
+import { FloatingCTA } from './components/FloatingCTA';
 
 function App() {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
@@ -27,6 +28,7 @@ function App() {
       <CTA />
       <Footer onOpenTerms={() => setIsTermsOpen(true)} />
       <Terms isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
+      <FloatingCTA />
     </div>
   );
 }

@@ -62,16 +62,18 @@ export const Services: React.FC = () => {
           subtitle="Comprehensive garment care tailored to your specific needs. We treat every fabric with the specialized attention it deserves."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 mt-20">
-          {services.map((service, index) => (
-            <div key={index} className="animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.15}s` }}>
-              <ServiceCard 
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-              />
-            </div>
-          ))}
+        <div className="mt-20">
+          <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-6 pb-8 -mx-4 px-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 xl:gap-10 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+            {services.map((service, index) => (
+              <div key={index} className="snap-center w-[85vw] max-w-[350px] flex-shrink-0 md:w-auto md:max-w-none md:flex-shrink animate-fade-in-up h-full" style={{ animationDelay: `${index * 0.15}s` }}>
+                <ServiceCard 
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
