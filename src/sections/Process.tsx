@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { SectionTitle } from '../components/SectionTitle';
 import processImg from '../assets/process_image.png';
