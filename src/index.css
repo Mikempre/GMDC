@@ -3,17 +3,53 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+  }
   body {
-    @apply text-gray-800 dark:text-gray-100 antialiased bg-gray-50 dark:bg-[#081630] transition-colors duration-300;
+    @apply text-gray-800 dark:text-gray-100 antialiased bg-gray-50 dark:bg-[#060d1f] transition-colors duration-500 selection:bg-brandRed-500 selection:text-white;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white bg-opacity-70 backdrop-blur-md border border-white border-opacity-20 shadow-lg;
+    @apply bg-white/40 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
   }
   .glass-dark {
-    @apply bg-navy-900 bg-opacity-80 backdrop-blur-md border border-white border-opacity-10 shadow-lg;
+    @apply bg-[#0B2046]/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
   }
+  .glass-card {
+    @apply bg-white/60 dark:bg-[#112B5C]/30 backdrop-blur-lg border border-white/50 dark:border-white/10 shadow-xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-900 to-brandRed-500 dark:from-white dark:to-gray-400;
+  }
+}
+
+/* Infinite Marquee */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee-scroll 25s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hide Scrollbar for Snap Carousel */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface SectionTitleProps {
   title: string;
@@ -20,7 +21,13 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
   };
 
   return (
-    <div className={`mb-12 ${alignment[align]} max-w-3xl`}>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.7 }}
+      className={`mb-12 ${alignment[align]} max-w-3xl`}
+    >
       <h2 className={`text-4xl md:text-5xl font-serif font-black mb-4 ${dark ? 'text-white' : 'text-navy-900 dark:text-white'} relative inline-block transition-colors`}>
         {title}
         <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 rounded-full ${dark ? 'bg-brandRed-500' : 'bg-brandRed-500'} ${align === 'left' ? 'left-0 transform-none' : ''}`}></span>
@@ -30,6 +37,6 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
           {subtitle}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 };
