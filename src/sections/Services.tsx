@@ -49,11 +49,11 @@ export const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-32 bg-gray-50 dark:bg-[#081630] relative transition-colors duration-500 overflow-hidden">
+    <section id="services" className="py-32 bg-gray-50 dark:bg-[#061c47] relative transition-colors duration-500 overflow-hidden">
       {/* Decorative background blur */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-brandRed-50 dark:bg-brandRed-900/10 blur-[120px] opacity-60"></div>
-        <div className="absolute bottom-0 left-[-10%] w-[600px] h-[600px] rounded-full bg-navy-100 dark:bg-navy-900/20 blur-[120px] opacity-60"></div>
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-brandBlue-50 dark:bg-brandBlue-900/10 blur-[120px] opacity-60"></div>
+        <div className="absolute bottom-0 left-[-10%] w-[600px] h-[600px] rounded-full bg-brandBlue-100 dark:bg-brandBlue-900/20 blur-[120px] opacity-60"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

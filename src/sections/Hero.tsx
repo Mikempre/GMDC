@@ -18,36 +18,13 @@ export const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#060d1f] transition-colors duration-500 pt-20 pb-12">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-20 pb-12">
       {/* Dynamic Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-full h-full bg-mesh-light dark:bg-mesh-dark opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700"></div>
-        <motion.div 
-          className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-gradient-to-br from-brandRed-400/30 to-brandRed-600/10 blur-[100px]"
-          animate={{
-            scale: [1, 1.1, 1],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute top-[40%] -left-[20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] rounded-full bg-gradient-to-tr from-navy-400/20 to-navy-800/10 blur-[80px]"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, -30, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-0 right-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-gold-400/10 blur-[60px]"
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-gradient-to-br from-brandBlue-400/30 to-brandBlue-600/10 blur-3xl"></div>
+        <div className="absolute top-[40%] -left-[20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] rounded-full bg-gradient-to-tr from-brandBlue-400/20 to-brandBlue-800/10 blur-3xl"></div>
+        <div className="absolute bottom-0 right-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-brandBlue-400/10 blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
@@ -60,26 +37,26 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:glass-dark mb-8"
           >
-            <span className="flex h-2.5 w-2.5 rounded-full bg-brandRed-500 animate-pulse-slow shadow-[0_0_8px_rgba(211,26,33,0.8)]"></span>
-            <span className="text-sm font-semibold tracking-wide text-navy-900 dark:text-gray-200 uppercase">Premium Fabric Care</span>
+            <span className="flex h-2.5 w-2.5 rounded-full bg-brandBlue-500 animate-pulse-slow shadow-[0_0_8px_rgba(211,26,33,0.8)]"></span>
+            <span className="text-sm font-semibold tracking-wide text-brandBlue-900 dark:text-gray-200 uppercase">Premium Fabric Care</span>
           </motion.div>
           
           <motion.h1 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-serif font-black text-navy-900 dark:text-white tracking-tight leading-[1.05] mb-6"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-serif font-black text-brandBlue-900 dark:text-white tracking-tight leading-[1.05] mb-6"
           >
             Elevate Your <br className="hidden md:block"/>
             <span className="relative inline-block mt-2">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandRed-500 to-brandRed-600 dark:from-brandRed-400 dark:to-gold-500">
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandBlue-500 to-brandBlue-600 dark:from-brandBlue-400 dark:to-brandBlue-500">
                 Wardrobe
               </span>
               <motion.svg 
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ duration: 1.5, delay: 0.8, ease: "easeInOut" }}
-                className="absolute w-full h-2.5 -bottom-1 left-0 text-brandRed-300 dark:text-brandRed-900/60 -z-0" 
+                className="absolute w-full h-2.5 -bottom-1 left-0 text-brandBlue-300 dark:text-brandBlue-900/60 -z-0" 
                 viewBox="0 0 100 10" preserveAspectRatio="none"
               >
                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" strokeLinecap="round" fill="none" />
@@ -93,7 +70,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
           >
-            Experience the <span className="font-semibold text-navy-900 dark:text-white">Gran Maestro</span> difference. Nearly 20 years of fabricare revolution, delivering impeccable laundry and dry cleaning directly to your door.
+            Experience the <span className="font-semibold text-brandBlue-900 dark:text-white">Gran Maestro</span> difference. Nearly 20 years of fabricare revolution, delivering impeccable laundry and dry cleaning directly to your door.
           </motion.p>
           
           <motion.div 
@@ -109,7 +86,7 @@ export const Hero: React.FC = () => {
               </Button>
             </a>
             <a href="tel:+2348188884275" className="w-full sm:w-auto">
-              <Button variant="outline" size="lg" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/50 dark:bg-navy-900/50 backdrop-blur-sm border-2 hover:bg-white dark:hover:bg-navy-800 transition-all duration-300">
+              <Button variant="outline" size="lg" className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/50 dark:bg-brandBlue-900/50 backdrop-blur-sm border-2 hover:bg-white dark:hover:bg-brandBlue-800 transition-all duration-300">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                 Call Us Now
               </Button>
@@ -120,15 +97,15 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-12 pt-8 border-t border-gray-200 dark:border-navy-800 flex items-center justify-center lg:justify-start gap-12"
+            className="mt-12 pt-8 border-t border-gray-200 dark:border-brandBlue-800 flex items-center justify-center lg:justify-start gap-12"
           >
              <div className="flex flex-col items-center lg:items-start group">
-               <span className="text-4xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-r from-navy-900 to-navy-700 dark:from-white dark:to-gray-300 group-hover:scale-110 transition-transform">20+</span>
+               <span className="text-4xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-r from-brandBlue-900 to-brandBlue-700 dark:from-white dark:to-gray-300 group-hover:scale-110 transition-transform">20+</span>
                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider mt-1">Years Exp.</span>
              </div>
              <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 dark:via-gray-700 to-transparent"></div>
              <div className="flex flex-col items-center lg:items-start group">
-               <span className="text-4xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-r from-brandRed-500 to-brandRed-600 dark:from-gold-400 dark:to-gold-500 group-hover:scale-110 transition-transform">10k+</span>
+               <span className="text-4xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-r from-brandBlue-500 to-brandBlue-600 dark:from-brandBlue-400 dark:to-brandBlue-500 group-hover:scale-110 transition-transform">10k+</span>
                <span className="text-sm text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider mt-1">Happy Clients</span>
              </div>
           </motion.div>
@@ -143,11 +120,11 @@ export const Hero: React.FC = () => {
         >
           <div className="relative w-full h-full min-h-[400px] lg:min-h-[500px] flex items-center justify-center group">
             {/* Decorative background for image */}
-            <div className="absolute inset-4 rounded-[3rem] border-2 border-brandRed-200 dark:border-navy-700 transform rotate-6 group-hover:rotate-12 transition-transform duration-700 z-0"></div>
-            <div className="absolute inset-4 rounded-[3rem] border-2 border-navy-200 dark:border-brandRed-900/50 transform -rotate-3 group-hover:-rotate-6 transition-transform duration-700 z-0"></div>
+            <div className="absolute inset-4 rounded-[3rem] border-2 border-brandBlue-200 dark:border-brandBlue-700 transform rotate-6 group-hover:rotate-12 transition-transform duration-700 z-0"></div>
+            <div className="absolute inset-4 rounded-[3rem] border-2 border-brandBlue-200 dark:border-brandBlue-900/50 transform -rotate-3 group-hover:-rotate-6 transition-transform duration-700 z-0"></div>
 
             {/* Main Image Carousel */}
-            <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[2.5rem] shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500 bg-navy-900">
+            <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[2.5rem] shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500 bg-brandBlue-900">
               <AnimatePresence>
                 <motion.img 
                   key={currentImageIndex}
@@ -160,7 +137,7 @@ export const Hero: React.FC = () => {
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-10000" 
                 />
               </AnimatePresence>
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent opacity-60 z-10 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-60 z-10 pointer-events-none"></div>
             </div>
             
             {/* Floating elements */}
@@ -169,11 +146,11 @@ export const Hero: React.FC = () => {
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -left-4 sm:-left-12 top-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-brandRed-400 to-brandRed-600 text-white rounded-full flex items-center justify-center shadow-inner">
+              <div className="w-12 h-12 bg-gradient-to-br from-brandBlue-400 to-brandBlue-600 text-white rounded-full flex items-center justify-center shadow-inner">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
               </div>
               <div className="pr-2">
-                <p className="text-sm font-bold text-navy-900 dark:text-white">Spotless Clean</p>
+                <p className="text-sm font-bold text-brandBlue-900 dark:text-white">Spotless Clean</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300 font-medium">100% Guaranteed</p>
               </div>
             </motion.div>
@@ -183,11 +160,11 @@ export const Hero: React.FC = () => {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className="absolute -right-4 sm:-right-8 bottom-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10"
             >
-               <div className="w-12 h-12 bg-gradient-to-br from-navy-600 to-navy-900 text-gold-400 rounded-full flex items-center justify-center shadow-inner">
+               <div className="w-12 h-12 bg-gradient-to-br from-brandBlue-600 to-brandBlue-900 text-brandBlue-400 rounded-full flex items-center justify-center shadow-inner">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               </div>
               <div className="pr-2">
-                <p className="text-sm font-bold text-navy-900 dark:text-white">Fast Turnaround</p>
+                <p className="text-sm font-bold text-brandBlue-900 dark:text-white">Fast Turnaround</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300 font-medium">Express Available</p>
               </div>
             </motion.div>

@@ -8,19 +8,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          900: '#0B2046', // Gran Maestro deep blue
-          800: '#112B5C',
-          700: '#183875',
-        },
-        brandRed: {
-          500: '#D31A21', // Gran Maestro bright red
-          600: '#B0131B',
-        },
-        gold: {
-          400: '#FDE047',
-          500: '#EAB308',
-          600: '#CA8A04',
+        brandBlue: {
+          900: '#06318c', // Darkest blue for dark mode components and headings
+          800: '#0040a8', // Darker electric blue
+          700: '#004bd6', // Hover for buttons
+          600: '#004bd6', // Hover for buttons
+          500: '#0050d2', // Primary vibrant electric blue for buttons and highlights
+          400: '#337aff', // Lighter blue
+          100: '#cce0ff', // Very light blue
+          50: '#e6f0ff',  // Light background for badges
         }
       },
       fontFamily: {

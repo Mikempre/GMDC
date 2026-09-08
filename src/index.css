@@ -8,8 +8,13 @@
     scroll-padding-top: 120px;
   }
   body {
-    @apply text-gray-800 dark:text-gray-100 antialiased bg-gray-50 dark:bg-[#060d1f] transition-colors duration-500 selection:bg-brandRed-500 selection:text-white;
+    @apply text-gray-800 dark:text-gray-100 antialiased bg-gray-50 dark:bg-[#041333] transition-colors duration-500;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  ::selection {
+    background-color: #0050d2; /* brandBlue-500 */
+    color: white;
   }
 }
 
@@ -18,13 +23,13 @@
     @apply bg-white/40 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
   }
   .glass-dark {
-    @apply bg-[#0B2046]/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+    @apply bg-[#06318c]/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
   }
   .glass-card {
-    @apply bg-white/60 dark:bg-[#112B5C]/30 backdrop-blur-lg border border-white/50 dark:border-white/10 shadow-xl;
+    @apply bg-white/60 dark:bg-[#06318c]/30 backdrop-blur-lg border border-white/50 dark:border-white/10 shadow-xl;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-navy-900 to-brandRed-500 dark:from-white dark:to-gray-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#06318c] to-[#0050d2] dark:from-white dark:to-gray-400;
   }
 }
 

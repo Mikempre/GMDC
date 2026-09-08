@@ -1,35 +1,37 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './layout/Header';
-import { Hero } from './sections/Hero';
-import { Marquee } from './components/Marquee';
-import { Services } from './sections/Services';
-import { Process } from './sections/Process';
-import { FAQ } from './sections/FAQ';
-import { CTA } from './sections/CTA';
-import { Terms } from './sections/Terms';
 import { Footer } from './layout/Footer';
+import { Terms } from './sections/Terms';
 import { FloatingCTA } from './components/FloatingCTA';
+import { ScrollToTop } from './components/ScrollToTop';
+
+import { Home } from './pages/Home';
+import { WhyUs } from './pages/WhyUs';
+import { Founder } from './pages/Founder';
+import { Contact } from './pages/Contact';
 
 function App() {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
 
   return (
-    <div className="font-sans antialiased text-gray-800 bg-gray-50 overflow-x-hidden">
-      <Header />
-      
-      <main>
-        <Hero />
-        <Marquee />
-        <Services />
-        <Process />
-        <FAQ />
-      </main>
+    <Router>
+      <ScrollToTop />
+      <div className="font-sans antialiased text-gray-800 bg-gray-50 overflow-x-hidden">
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/why-us" element={<WhyUs />} />
+          <Route path="/founder" element={<Founder />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-      <CTA />
-      <Footer onOpenTerms={() => setIsTermsOpen(true)} />
-      <Terms isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
-      <FloatingCTA />
-    </div>
+        <Footer onOpenTerms={() => setIsTermsOpen(true)} />
+        <Terms isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} />
+        <FloatingCTA />
+      </div>
+    </Router>
   );
 }
 

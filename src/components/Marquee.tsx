@@ -15,7 +15,7 @@ const tags = [
 
 export const Marquee: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-brandRed-600 via-brandRed-500 to-brandRed-600 py-5 select-none">
+    <section className="relative overflow-hidden bg-gradient-to-r from-brandBlue-600 via-brandBlue-500 to-brandBlue-600 py-5 select-none">
       <div
         className="marquee-track"
         onTouchStart={(e) => { e.currentTarget.style.animationPlayState = 'paused'; }}

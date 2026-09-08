@@ -4,24 +4,24 @@ import { Button } from '../components/Button';
 
 export const CTA: React.FC = () => {
   return (
-    <section className="py-24 bg-gray-50 dark:bg-[#081630] relative transition-colors duration-300">
+    <section className="py-24 bg-gray-50 dark:bg-[#061c47] relative transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-[#0B2046] px-8 py-16 md:px-16 md:py-24 text-center border border-navy-700/50"
+          className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-[#0B2046] px-8 py-16 md:px-16 md:py-24 text-center border border-brandBlue-700/50"
         >
           {/* Background Abstract Glows */}
           <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none z-0">
-            <div className="absolute -top-[50%] -right-[20%] w-[70%] h-[150%] rounded-full bg-brandRed-500/20 blur-[100px]"></div>
+            <div className="absolute -top-[50%] -right-[20%] w-[70%] h-[150%] rounded-full bg-brandBlue-500/20 blur-[100px]"></div>
             <div className="absolute -bottom-[50%] -left-[20%] w-[50%] h-[150%] rounded-full bg-blue-500/10 blur-[100px]"></div>
           </div>
 
           <div className="relative z-10 flex flex-col items-center">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-white mb-6 leading-tight max-w-3xl">
-              Ready to elevate your <span className="text-brandRed-500">wardrobe?</span>
+              Ready to elevate your <span className="text-brandBlue-500">wardrobe?</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
               Experience the Gran Maestro difference today. Schedule your pickup and let our experts take care of the rest.
