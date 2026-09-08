@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"
           >
-            Experience the <span className="font-semibold text-brandBlue-900 dark:text-white">Gran Maestro</span> difference. Nearly 20 years of fabricare revolution, delivering impeccable laundry and dry cleaning directly to your door.
+            Experience the <span className="font-semibold text-brandBlue-900 dark:text-white">Gran Maestro</span> difference. Nearly 20 years of fabricare revolution, delivering impeccable laundry and dry cleaning directly to your door-step.
           </motion.p>
           
           <motion.div 

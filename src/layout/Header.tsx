@@ -53,7 +53,15 @@ export const Header: React.FC = () => {
         <div className={`flex justify-between items-center w-full max-w-6xl transition-all duration-500 ${isScrolled ? 'glass dark:glass-dark px-4 py-2 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.1)]' : 'bg-transparent py-2 px-0 rounded-none'}`}>
           
           <div className="flex items-center gap-2 cursor-pointer z-50 shrink-0">
-            <Link to="/">
+            <Link 
+              to="/"
+              onClick={(e) => {
+                if (location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+              }}
+            >
               <img src={logo} alt="Gran Maestro Drycleaners Logo" className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} />
             </Link>
           </div>
@@ -70,6 +78,9 @@ export const Header: React.FC = () => {
                     if (link.name === 'Contact') {
                       e.preventDefault();
                       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    } else if (link.name === 'Home' && location.pathname === '/') {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                   }}
                   className={`relative px-3 py-2 text-sm font-medium transition-colors group ${isActive && !link.path.includes('#') && link.name !== 'Contact' ? 'text-brandBlue-500' : 'text-brandBlue-900 dark:text-gray-200 hover:text-brandBlue-500 dark:hover:text-brandBlue-400'}`}
@@ -144,6 +155,9 @@ export const Header: React.FC = () => {
                         if (link.name === 'Contact') {
                           e.preventDefault();
                           window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                        } else if (link.name === 'Home' && location.pathname === '/') {
+                          e.preventDefault();
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
                         }
                         setIsMobileMenuOpen(false);
                       }}
