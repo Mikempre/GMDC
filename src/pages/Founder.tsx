@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Founder: React.FC = () => {
   return (
-    <main className="pt-32 pb-24 bg-gray-50 dark:bg-[#041333] min-h-screen transition-colors duration-300">
+    <main className="pt-32 md:pt-48 pb-24 bg-gray-50 dark:bg-[#041333] min-h-screen transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <motion.div 

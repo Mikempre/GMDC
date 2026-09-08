@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
           
           <div className="flex items-center gap-2 cursor-pointer z-50 shrink-0">
             <Link to="/">
-              <img src={logo} alt="Gran Maestro Drycleaners Logo" className={`w-auto transition-all duration-500 ${isScrolled ? 'h-14 rounded-full' : 'h-20 md:h-24 bg-white/80 dark:bg-white/90 p-1 rounded-xl'}`} />
+              <img src={logo} alt="Gran Maestro Drycleaners Logo" className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} />
             </Link>
           </div>
           
