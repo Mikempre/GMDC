@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-20 pb-12">
       {/* Dynamic Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-full h-full bg-mesh-light dark:bg-mesh-dark opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-mesh-light-v2 dark:bg-mesh-dark-v2 opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700"></div>
         <div className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-gradient-to-br from-brandBlue-400/30 to-brandBlue-600/10 blur-3xl"></div>
         <div className="absolute top-[40%] -left-[20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] rounded-full bg-gradient-to-tr from-brandBlue-400/20 to-brandBlue-800/10 blur-3xl"></div>
         <div className="absolute bottom-0 right-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-brandBlue-400/10 blur-3xl"></div>
@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:glass-dark mb-8"
           >
-            <span className="flex h-2.5 w-2.5 rounded-full bg-brandBlue-500 animate-pulse-slow shadow-[0_0_8px_rgba(211,26,33,0.8)]"></span>
+            <span className="flex h-2.5 w-2.5 rounded-full bg-brandBlue-500 animate-pulse-slow shadow-[0_0_8px_rgba(0,80,210,0.8)]"></span>
             <span className="text-sm font-semibold tracking-wide text-brandBlue-900 dark:text-gray-200 uppercase">Premium Fabric Care</span>
           </motion.div>
           

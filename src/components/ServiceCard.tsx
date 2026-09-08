@@ -50,7 +50,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, ic
         {/* Shine Overlay */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-in-out"></div>
         
-        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 relative z-10 transition-all duration-500 shadow-inner group-hover:shadow-[0_0_20px_rgba(211,26,33,0.3)] group-hover:-translate-y-2
+        <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 relative z-10 transition-all duration-500 shadow-inner group-hover:shadow-[0_0_20px_rgba(0,80,210,0.3)] group-hover:-translate-y-2
           ${dark ? 'bg-brandBlue-900/80 text-brandBlue-400 group-hover:bg-brandBlue-500 group-hover:text-white' : 'bg-white/90 text-brandBlue-500 group-hover:bg-gradient-to-br group-hover:from-brandBlue-500 group-hover:to-brandBlue-600 group-hover:text-white'}`}>
           {icon}
         </div>

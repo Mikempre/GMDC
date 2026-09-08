@@ -10,7 +10,7 @@ export const FloatingCTA: React.FC = () => {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: "spring", stiffness: 200, damping: 20 }}
-      className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-brandBlue-500 to-brandBlue-600 text-white shadow-[0_10px_30px_rgba(211,26,33,0.4)] hover:shadow-[0_10px_40px_rgba(211,26,33,0.6)] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 group"
+      className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[100] flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-r from-brandBlue-500 to-brandBlue-600 text-white shadow-[0_10px_30px_rgba(0,80,210,0.4)] hover:shadow-[0_10px_40px_rgba(0,80,210,0.6)] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 group"
       aria-label="Contact us on WhatsApp"
     >
       <svg className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

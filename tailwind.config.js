@@ -47,8 +47,8 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'mesh-light': 'radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%)',
-        'mesh-dark': 'radial-gradient(at 40% 20%, hsla(28,100%,74%,0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%)',
+        'mesh-light-v2': 'radial-gradient(at 40% 20%, hsla(217,100%,90%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(217,100%,80%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(217,100%,95%,1) 0px, transparent 50%)',
+        'mesh-dark-v2': 'radial-gradient(at 40% 20%, hsla(217,100%,41%,0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(217,100%,60%,0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(217,100%,30%,0.1) 0px, transparent 50%)',
       }
     },
   },
