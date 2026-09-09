@@ -1,4 +1,5 @@
 import React from 'react';
+import { TopServicesCarousel } from '../components/TopServicesCarousel';
 import { Hero } from '../sections/Hero';
 import { Marquee } from '../components/Marquee';
 import { Services } from '../sections/Services';
@@ -10,6 +11,7 @@ import { motion } from 'framer-motion';
 export const Home: React.FC = () => {
   return (
     <main>
+      <TopServicesCarousel />
       <Hero />
       <Marquee />
       

@@ -11,14 +11,8 @@ const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
 export const Hero: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
   return (
-    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-32 md:pt-48 pb-12">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-8 pb-12">
       {/* Dynamic Animated Background */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-full h-full bg-mesh-light-v2 dark:bg-mesh-dark-v2 opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700"></div>
