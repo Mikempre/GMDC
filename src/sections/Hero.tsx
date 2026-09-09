@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
 import heroImage1 from '../assets/hero_image.png';
-import heroImage2 from '../assets/hero_delivery.png';
-import heroImage3 from '../assets/hero_ironing.png';
-import heroImage4 from '../assets/hero_folded.png';
-
-const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
 
 export const Hero: React.FC = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-8 pb-12">
@@ -119,18 +113,14 @@ export const Hero: React.FC = () => {
 
             {/* Main Image Carousel */}
             <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[2.5rem] shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500 bg-brandBlue-900">
-              <AnimatePresence>
-                <motion.img 
-                  key={currentImageIndex}
-                  src={heroImages[currentImageIndex]} 
-                  alt="Gran Maestro Premium Dry Cleaning Process" 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 1.5, ease: "easeInOut" }}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-10000" 
-                />
-              </AnimatePresence>
+              <motion.img 
+                src={heroImage1} 
+                alt="Gran Maestro Premium Dry Cleaning Process" 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-10000" 
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-60 z-10 pointer-events-none"></div>
             </div>
             

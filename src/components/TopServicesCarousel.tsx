@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
 import imgDryCleaning from '../assets/services/drycleaning.jpg';
 import imgCarpet from '../assets/services/carpet.jpg';
 import imgTailor from '../assets/services/tailor.jpg';
