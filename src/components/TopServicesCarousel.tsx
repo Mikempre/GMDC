@@ -3,15 +3,13 @@ import imgDryCleaning from '../assets/services/drycleaning.jpg';
 import imgCarpet from '../assets/services/carpet.jpg';
 import imgTailor from '../assets/services/tailor.jpg';
 import imgRestoration from '../assets/services/restoration.jpg';
-import imgFumigation from '../assets/services/fumigation.jpg';
 import imgSpecialized from '../assets/services/specialized.jpg';
 
 const carouselItems = [
   { id: 1, title: 'Dry Cleaning', image: imgDryCleaning, link: '#services' },
   { id: 2, title: 'Carpet Cleaning', image: imgCarpet, link: '#services' },
-  { id: 3, title: 'Tailoring', image: imgTailor, link: '#services' },
+  { id: 3, title: 'Alterations', image: imgTailor, link: '#services' },
   { id: 4, title: 'Restoration', image: imgRestoration, link: '#services' },
-  { id: 5, title: 'Fumigation', image: imgFumigation, link: '#services' },
   { id: 6, title: 'Specialized Care', image: imgSpecialized, link: '#services' },
 ];
 

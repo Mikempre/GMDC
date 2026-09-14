@@ -6,7 +6,6 @@ import imgDryCleaning from '../assets/services/drycleaning.jpg';
 import imgCarpet from '../assets/services/carpet.jpg';
 import imgTailor from '../assets/services/tailor.jpg';
 import imgRestoration from '../assets/services/restoration.jpg';
-import imgFumigation from '../assets/services/fumigation.jpg';
 import imgSpecialized from '../assets/services/specialized.jpg';
 
 export const Services: React.FC = () => {
@@ -28,7 +27,7 @@ export const Services: React.FC = () => {
       image: imgCarpet
     },
     {
-      title: "Garment Repairs & Alteration",
+      title: "Alterations",
       description: "From simple hems and button replacements to complex tailoring. Our master tailors ensure the perfect fit every time.",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path></svg>
@@ -42,14 +41,6 @@ export const Services: React.FC = () => {
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
       ),
       image: imgRestoration
-    },
-    {
-      title: "Fumigation & Pest Control",
-      description: "Keep your environment safe and pest-free with our professional fumigation services, tailored for both residential and commercial spaces.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-      ),
-      image: imgFumigation
     },
     {
       title: "Specialized Cleaning Services",
