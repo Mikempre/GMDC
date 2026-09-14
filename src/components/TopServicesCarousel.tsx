@@ -23,19 +23,19 @@ export const TopServicesCarousel: React.FC = () => {
     const container = scrollRef.current;
     if (!container) return;
 
-    let scrollAmount = 0;
     const step = 1; // pixels per frame
     const scrollSpeed = 20; // ms per frame
 
     const scrollInterval = setInterval(() => {
       if (container && !isHovered) {
-        scrollAmount += step;
-        if (scrollAmount >= container.scrollWidth / 2) {
+        let currentScroll = container.scrollLeft;
+        currentScroll += step;
+        
+        if (currentScroll >= container.scrollWidth / 2) {
           // Reset to beginning for infinite effect
-          scrollAmount = 0;
           container.scrollLeft = 0;
         } else {
-          container.scrollLeft = scrollAmount;
+          container.scrollLeft = currentScroll;
         }
       }
     }, scrollSpeed);
@@ -55,7 +55,9 @@ export const TopServicesCarousel: React.FC = () => {
         ref={scrollRef}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className="flex gap-4 overflow-x-hidden whitespace-nowrap px-4 sm:px-6 lg:px-8 pb-4"
+        onTouchStart={() => setIsHovered(true)}
+        onTouchEnd={() => setIsHovered(false)}
+        className="flex gap-4 overflow-x-auto whitespace-nowrap px-4 sm:px-6 lg:px-8 pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         style={{ scrollBehavior: 'auto' }}
       >
         {infiniteItems.map((item, index) => (
