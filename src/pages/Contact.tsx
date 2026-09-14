@@ -6,15 +6,17 @@ const locations = [
   {
     name: "BODIJA 1",
     address: "3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan",
-    phones: ["0818 888 4275", "0802 615 3163"]
+    phones: ["0818 888 4275"]
   },
   {
     name: "BODIJA 2",
-    address: "14, Aare Avenue (Beside Priceworth Supermarket), Bodija, Ibadan"
+    address: "14, Aare Avenue (Beside Priceworth Supermarket), Bodija, Ibadan",
+    phones: ["0901 790 9450"]
   },
   {
     name: "JERICHO",
-    address: "Plot 302A, Magazine Road (Opposite University Press PLC), Jericho, Ibadan"
+    address: "Plot 302A, Magazine Road (Opposite University Press PLC), Jericho, Ibadan",
+    phones: ["0909 333 6428"]
   }
 ];
 
