@@ -35,10 +35,10 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl font-serif font-black text-brandBlue-900 dark:text-white tracking-tight leading-[1.05] mb-6"
           >
-            Elevate Your <br className="hidden md:block"/>
+            Transform Your <br className="hidden md:block"/>
             <span className="relative inline-block mt-2">
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-brandBlue-500 to-brandBlue-600 dark:from-brandBlue-400 dark:to-brandBlue-500">
-                Wardrobe
+                Style
               </span>
               <motion.svg 
                 initial={{ pathLength: 0, opacity: 0 }}
