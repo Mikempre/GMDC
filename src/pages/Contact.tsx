@@ -4,16 +4,17 @@ import { SectionTitle } from '../components/SectionTitle';
 
 const locations = [
   {
-    name: "BODIJA",
-    address: "3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan"
+    name: "BODIJA 1",
+    address: "3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan",
+    phones: ["0818 888 4275", "0802 615 3163"]
+  },
+  {
+    name: "BODIJA 2",
+    address: "14, Aare Avenue (Beside Priceworth Supermarket), Bodija, Ibadan"
   },
   {
     name: "JERICHO",
     address: "Plot 302A, Magazine Road (Opposite University Press PLC), Jericho, Ibadan"
-  },
-  {
-    name: "AARE AVENUE, BODIJA",
-    address: "No 14, Aare Avenue, New Bodija, Ibadan"
   }
 ];
 
@@ -46,25 +47,16 @@ export const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-bold text-lg text-brandBlue-900 dark:text-white mb-1 tracking-wide">{loc.name}</h4>
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{loc.address}</p>
+                      {loc.phones && (
+                        <div className="mt-2 flex flex-wrap gap-3">
+                          {loc.phones.map((phone, i) => (
+                            <a key={i} href={`tel:${phone.replace(/\s+/g, '')}`} className="inline-block bg-brandBlue-50 dark:bg-brandBlue-800 text-brandBlue-600 dark:text-brandBlue-300 px-3 py-1 rounded-full text-sm font-bold hover:bg-brandBlue-500 hover:text-white transition-colors">{phone}</a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
-              </div>
-            </motion.div>
-
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-brandBlue-500 rounded-[2rem] p-8 md:p-10 shadow-xl text-white flex flex-col sm:flex-row items-center justify-between gap-6"
-            >
-              <div>
-                <h3 className="text-2xl font-black mb-2">Need Immediate Assistance?</h3>
-                <p className="text-brandBlue-100">Call us or schedule a pickup directly.</p>
-              </div>
-              <div className="flex flex-col gap-3 min-w-[200px]">
-                <a href="tel:+2348188884275" className="bg-white text-brandBlue-500 px-6 py-3 rounded-full font-bold text-center hover:bg-gray-100 transition-colors shadow-lg">0818 888 4275</a>
-                <a href="tel:+2348026153163" className="bg-brandBlue-600 border border-brandBlue-400 text-white px-6 py-3 rounded-full font-bold text-center hover:bg-brandBlue-700 transition-colors">0802 615 3163</a>
               </div>
             </motion.div>
 

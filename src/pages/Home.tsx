@@ -43,7 +43,7 @@ export const Home: React.FC = () => {
               Our pickup and delivery service will save your valuable time and let you enjoy your weekends.
             </p>
             <p>
-              With our 3 strategically located outlets, you also have the option of getting a more personalised service by walking into our laundry outlets nearest to you. Gran Maestro is your neighbourhood one-stop-shop for all things clothes & related items. We make it a point to understand clothes and fabrics better. So be it laundry, dry cleaning those special clothes, steam ironing those washed clothes or cleaning your shoes and bags, you can trust your clothes to us. We will launder your clothes exactly as we will treat ours. With care.
+              With our three strategically located outlets, you also have the option of getting a more personalised service by walking into our laundry outlets nearest to you. Gran Maestro is your neighbourhood one-stop-shop for all things clothes & related items. We make it a point to understand clothes and fabrics better. So be it laundry, drycleaning those special clothes, steam ironing those washed clothes or cleaning your shoes and bags, you can trust your clothes to us. We will launder your clothes exactly as we will treat ours. With care.
             </p>
             <p className="font-medium text-brandBlue-800 dark:text-gray-200">
               They will be packaged and sent to you in such a way that in no time you will start loving your wardrobe.

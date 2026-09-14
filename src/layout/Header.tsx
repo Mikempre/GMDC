@@ -3,11 +3,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
 import logo from '../assets/logo.png';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PriceModal } from '../components/PriceModal';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isPriceModalOpen, setIsPriceModalOpen] = useState(false);
 
   useEffect(() => {
     if (localStorage.theme === 'dark') {
@@ -42,6 +44,7 @@ export const Header: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/#services' },
+    { name: 'Prices', action: 'openPrices' },
     { name: 'Why Us', path: '/why-us' },
     { name: 'Founder', path: '/founder' },
     { name: 'Contact', path: '/contact' }
@@ -69,11 +72,24 @@ export const Header: React.FC = () => {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-1 lg:space-x-4 bg-white/50 dark:bg-brandBlue-900/50 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path || (link.path.includes('#') && location.pathname === '/');
+              if (link.action === 'openPrices') {
+                return (
+                  <button 
+                    key={link.name} 
+                    onClick={() => setIsPriceModalOpen(true)}
+                    className="relative px-3 py-2 text-sm font-medium transition-colors group text-brandBlue-900 dark:text-gray-200 hover:text-brandBlue-500 dark:hover:text-brandBlue-400"
+                  >
+                    {link.name}
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-brandBlue-500 transform origin-left transition-transform duration-300 scale-x-0 group-hover:scale-x-100"></span>
+                  </button>
+                );
+              }
+
+              const isActive = location.pathname === link.path || (link.path!.includes('#') && location.pathname === '/');
               return (
                 <Link 
                   key={link.name} 
-                  to={link.name === 'Contact' ? '#' : link.path} 
+                  to={link.name === 'Contact' ? '#' : link.path!} 
                   onClick={(e) => {
                     if (link.name === 'Contact') {
                       e.preventDefault();
@@ -83,10 +99,10 @@ export const Header: React.FC = () => {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                   }}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors group ${isActive && !link.path.includes('#') && link.name !== 'Contact' ? 'text-brandBlue-500' : 'text-brandBlue-900 dark:text-gray-200 hover:text-brandBlue-500 dark:hover:text-brandBlue-400'}`}
+                  className={`relative px-3 py-2 text-sm font-medium transition-colors group ${isActive && !link.path!.includes('#') && link.name !== 'Contact' ? 'text-brandBlue-500' : 'text-brandBlue-900 dark:text-gray-200 hover:text-brandBlue-500 dark:hover:text-brandBlue-400'}`}
                 >
                   {link.name}
-                  <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-brandBlue-500 transform origin-left transition-transform duration-300 ${isActive && !link.path.includes('#') && link.name !== 'Contact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
+                  <span className={`absolute inset-x-0 bottom-0 h-0.5 bg-brandBlue-500 transform origin-left transition-transform duration-300 ${isActive && !link.path!.includes('#') && link.name !== 'Contact' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                 </Link>
               );
             })}
@@ -100,7 +116,7 @@ export const Header: React.FC = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
               )}
             </button>
-            <a href="https://wa.me/2348188884275" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/2348026153163" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">Schedule Pickup</Button>
             </a>
           </div>
@@ -140,6 +156,28 @@ export const Header: React.FC = () => {
           >
             <div className="flex flex-col items-center space-y-6 w-full">
               {navLinks.map((link, idx) => {
+                if (link.action === 'openPrices') {
+                  return (
+                    <motion.div
+                      key={link.name}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      className="w-full border-b border-gray-100 dark:border-brandBlue-800"
+                    >
+                      <button 
+                        onClick={() => {
+                          setIsPriceModalOpen(true);
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="block text-3xl font-serif transition-colors w-full text-center py-4 text-brandBlue-900 dark:text-white hover:text-brandBlue-500 dark:hover:text-brandBlue-400"
+                      >
+                        {link.name}
+                      </button>
+                    </motion.div>
+                  );
+                }
+
                 const isActive = location.pathname === link.path;
                 return (
                   <motion.div
@@ -150,7 +188,7 @@ export const Header: React.FC = () => {
                     className="w-full border-b border-gray-100 dark:border-brandBlue-800"
                   >
                     <Link 
-                      to={link.name === 'Contact' ? '#' : link.path} 
+                      to={link.name === 'Contact' ? '#' : link.path!} 
                       onClick={(e) => {
                         if (link.name === 'Contact') {
                           e.preventDefault();
@@ -161,7 +199,7 @@ export const Header: React.FC = () => {
                         }
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`block text-3xl font-serif transition-colors w-full text-center py-4 ${isActive && !link.path.includes('#') && link.name !== 'Contact' ? 'text-brandBlue-500' : 'text-brandBlue-900 dark:text-white hover:text-brandBlue-500 dark:hover:text-brandBlue-400'}`}
+                      className={`block text-3xl font-serif transition-colors w-full text-center py-4 ${isActive && !link.path!.includes('#') && link.name !== 'Contact' ? 'text-brandBlue-500' : 'text-brandBlue-900 dark:text-white hover:text-brandBlue-500 dark:hover:text-brandBlue-400'}`}
                     >
                       {link.name}
                     </Link>
@@ -174,7 +212,7 @@ export const Header: React.FC = () => {
                 transition={{ delay: navLinks.length * 0.1 }}
                 className="pt-6 w-full"
               >
-                <a href="https://wa.me/2348188884275" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
+                <a href="https://wa.me/2348026153163" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
                   <Button size="lg" className="w-full rounded-2xl shadow-xl">Schedule Pickup</Button>
                 </a>
               </motion.div>
@@ -182,6 +220,11 @@ export const Header: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <PriceModal 
+        isOpen={isPriceModalOpen} 
+        onClose={() => setIsPriceModalOpen(false)} 
+      />
     </>
   );
 };

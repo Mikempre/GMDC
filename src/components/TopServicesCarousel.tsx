@@ -1,16 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react';
 import imgDryCleaning from '../assets/services/drycleaning.jpg';
-import imgCarpet from '../assets/services/carpet.jpg';
-import imgTailor from '../assets/services/tailor.jpg';
-import imgRestoration from '../assets/services/restoration.jpg';
-import imgSpecialized from '../assets/services/specialized.jpg';
+import imgLaundry from '../assets/services/laundry.jpg';
+import imgIroning from '../assets/services/ironing.jpg';
+import imgStain from '../assets/services/stain.jpg';
+import imgHousehold from '../assets/services/household.jpg';
+import imgShoes from '../assets/services/shoes.jpg';
+import imgSpecialty from '../assets/services/specialty.jpg';
+import imgCommercial from '../assets/services/commercial.jpg';
+import imgDelivery from '../assets/services/delivery.jpg';
+import imgExpress from '../assets/services/express.jpg';
 
 const carouselItems = [
-  { id: 1, title: 'Dry Cleaning', image: imgDryCleaning, link: '#services' },
-  { id: 2, title: 'Carpet Cleaning', image: imgCarpet, link: '#services' },
-  { id: 3, title: 'Alterations', image: imgTailor, link: '#services' },
-  { id: 4, title: 'Restoration', image: imgRestoration, link: '#services' },
-  { id: 6, title: 'Specialized Care', image: imgSpecialized, link: '#services' },
+  { id: 1, title: 'Drycleaning Services', image: imgDryCleaning, link: '#services' },
+  { id: 2, title: 'Laundry Services', image: imgLaundry, link: '#services' },
+  { id: 3, title: 'Ironing & Pressing', image: imgIroning, link: '#services' },
+  { id: 4, title: 'Stain & Spot Treatment', image: imgStain, link: '#services' },
+  { id: 5, title: 'Household Textile Cleaning', image: imgHousehold, link: '#services' },
+  { id: 6, title: 'Shoe & Bag Care', image: imgShoes, link: '#services' },
+  { id: 7, title: 'Specialty Item Care', image: imgSpecialty, link: '#services' },
+  { id: 8, title: 'Commercial Laundry', image: imgCommercial, link: '#services' },
+  { id: 9, title: 'Pick-up & Delivery', image: imgDelivery, link: '#services' },
+  { id: 10, title: 'Express Service', image: imgExpress, link: '#services' },
 ];
 
 export const TopServicesCarousel: React.FC = () => {

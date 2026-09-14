@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
             </div>
             <p className="text-brandBlue-300 font-bold tracking-wider text-sm mb-2">RC No. : 1981166</p>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Experience the pinnacle of garment care. Premium dry cleaning, expert laundry, and exceptional service delivered to your door.
+              Experience the best of garment care. Premium drycleaning, expert laundry, and exceptional service delivered to your door step.
             </p>
           </div>
 
@@ -36,19 +36,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
             <div className="text-gray-300 space-y-4">
               <p className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span><strong>BODIJA:</strong> 3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan</span>
+                <span><strong>BODIJA 1:</strong> 3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan<br/><span className="text-sm text-brandBlue-400">Tel: 0818 888 4275, 0802 615 3163</span></span>
               </p>
               <p className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span><strong>AARE AVENUE:</strong> 14, Aare Avenue (Beside Price Worth Supermarket), Bodija, Ibadan</span>
+                <span><strong>BODIJA 2:</strong> 14, Aare Avenue (Beside Priceworth Supermarket), Bodija, Ibadan</span>
               </p>
               <p className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                 <span><strong>JERICHO:</strong> Plot 302A, Magazine Road (Opposite University Press PLC), Jericho, Ibadan</span>
-              </p>
-              <p className="flex items-start gap-3 pt-2">
-                <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                <span>0818 888 4275, 0802 615 3163</span>
               </p>
             </div>
           </div>

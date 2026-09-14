@@ -4,12 +4,13 @@ import { motion, useMotionValue, useTransform } from 'framer-motion';
 interface ServiceCardProps {
   title: string;
   description: string;
+  bullets?: string[];
   icon?: React.ReactNode;
   image?: string;
   dark?: boolean;
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, image, dark = false }) => {
+export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, bullets, icon, image, dark = false }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [10, -10]);
@@ -80,6 +81,17 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, ic
           `}>
             {description}
           </p>
+
+          {bullets && bullets.length > 0 && (
+            <ul className="mt-4 space-y-2 relative z-10">
+              {bullets.map((bullet, idx) => (
+                <li key={idx} className={`flex items-start text-sm ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+                  <svg className={`w-4 h-4 mt-0.5 mr-2 flex-shrink-0 ${dark ? 'text-brandBlue-400' : 'text-brandBlue-500'}`} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </motion.div>
     </motion.div>
