@@ -26,7 +26,7 @@ export const Hero: React.FC = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass dark:glass-dark mb-8"
           >
             <span className="flex h-2.5 w-2.5 rounded-full bg-brandBlue-500 animate-pulse-slow shadow-[0_0_8px_rgba(0,80,210,0.8)]"></span>
-            <span className="text-sm font-semibold tracking-wide text-brandBlue-900 dark:text-gray-200 uppercase">Premium Fabric Care</span>
+            <span className="text-sm font-semibold tracking-wide text-brandBlue-900 dark:text-gray-200 uppercase">Premium Fabricare Specialist</span>
           </motion.div>
           
           <motion.h1 
