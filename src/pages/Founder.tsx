@@ -19,8 +19,8 @@ export const Founder: React.FC = () => {
           </div>
 
           <div className="relative z-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-brandBlue-900 dark:text-white mb-4 leading-tight">
-              FROM THE DESK OF THE <span className="text-brandBlue-500">FOUNDER/CEO</span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-black text-brandBlue-900 dark:text-white mb-4 leading-tight uppercase">
+              <span className="text-brandBlue-500">From the Founder</span>
             </h1>
             <div className="w-20 h-1 bg-brandBlue-500 mb-12 rounded-full"></div>
 
@@ -71,16 +71,8 @@ export const Founder: React.FC = () => {
               <p>Thank you for your continued support and commitment. Together, we will build a stronger, bigger and more professionally managed organisation.</p>
 
               <div className="mt-16 pt-8 border-t border-gray-100 dark:border-brandBlue-800">
-                <p className="mb-6">Warm regards,</p>
-                {/* Simulated Signature */}
-                <div className="mb-4">
-                  <svg className="h-16 text-brandBlue-900 dark:text-white opacity-80" viewBox="0 0 200 60" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M20 40c10-10 20-30 30-30s10 30 20 30 15-20 25-20 10 20 20 20c10 0 15-15 25-15s15 15 25 15" />
-                    <path d="M40 50l60-10" />
-                  </svg>
-                </div>
-                <p className="font-bold text-xl text-brandBlue-900 dark:text-white">TAIWO O. A. OGUNBODEDE (Esq.)</p>
-                <p className="text-gray-500 dark:text-gray-400 font-sans tracking-widest uppercase text-sm mt-1">Founder/CEO</p>
+                <p className="mb-2">Warm regards,</p>
+                <p className="text-gray-500 dark:text-gray-400 font-sans tracking-widest uppercase text-sm mt-1">Founder</p>
                 <p className="text-brandBlue-500 font-sans font-medium mt-1">Gran Maestro Drycleaners</p>
               </div>
             </div>

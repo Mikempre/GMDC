@@ -4,19 +4,19 @@ import { SectionTitle } from '../components/SectionTitle';
 
 const locations = [
   {
-    name: "BODIJA 1",
-    address: "3, Adeyi Avenue, Off Awolowo Avenue, (Near Davies Hotel), Bodija, Ibadan",
-    phones: ["0818 888 4275"]
+    name: "BODIJA OUTLET 1 (ADEYI AVENUE)",
+    address: "3, Adeyi Avenue, (Opposite Abeni House), Off Awolowo Avenue, Old Bodija, Ibadan",
+    phones: ["0818 888 4275", "0802 615 3163"]
   },
   {
-    name: "BODIJA 2",
-    address: "14, Aare Avenue (Beside Priceworth Supermarket), Bodija, Ibadan",
-    phones: ["0901 790 9450"]
+    name: "BODIJA OUTLET 2 (AARE AVENUE)",
+    address: "No 14, Aare Avenue, (Beside Priceworth Supermarket), New Bodija, Ibadan",
+    phones: ["0901 790 9450", "0813 601 1404"]
   },
   {
-    name: "JERICHO",
+    name: "JERICHO OUTLET",
     address: "Plot 302A, Magazine Road (Opposite University Press PLC), Jericho, Ibadan",
-    phones: ["0909 333 6428"]
+    phones: ["0909 333 6428", "0909 777 6428"]
   }
 ];
 
