@@ -20,10 +20,10 @@ export const CTA: React.FC = () => {
           </div>
 
           <div className="relative z-10 flex flex-col items-center">
-            <h2 className="text-4xl md:text-5xl font-black text-brandBlue-900 dark:text-white mb-6">
-              Ready to <span className="text-brandBlue-500">Transform Your Style?</span>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">
+              Ready to <span className="text-brandBlue-400">Transform Your Style?</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto md:mx-0">
               Experience the Gran Maestro difference today. Schedule a pickup or visit our outlet for premium garment care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
