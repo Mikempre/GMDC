@@ -27,7 +27,7 @@ export const CTA: React.FC = () => {
               Experience the Gran Maestro difference today. Schedule a pickup or visit our outlet for premium garment care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href="https://wa.me/2348026153163" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://wa.me/2348188884275" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <div className="relative group">
                   <div className="absolute -inset-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-pulse"></div>
                   <Button size="lg" className="relative w-full sm:w-auto flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#128C7E] text-white text-lg px-10 py-5 rounded-full border-2 border-transparent hover:border-[#128C7E]">

@@ -116,7 +116,7 @@ export const Header: React.FC = () => {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
               )}
             </button>
-            <a href="https://wa.me/2348026153163" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/2348188884275" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">Schedule Pickup</Button>
             </a>
           </div>
@@ -212,7 +212,7 @@ export const Header: React.FC = () => {
                 transition={{ delay: navLinks.length * 0.1 }}
                 className="pt-6 w-full"
               >
-                <a href="https://wa.me/2348026153163" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
+                <a href="https://wa.me/2348188884275" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)} className="w-full block">
                   <Button size="lg" className="w-full rounded-2xl shadow-xl">Schedule Pickup</Button>
                 </a>
               </motion.div>

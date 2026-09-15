@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const FloatingCTA: React.FC = () => {
   return (
     <motion.a
-      href="https://wa.me/2348026153163"
+      href="https://wa.me/2348188884275"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
