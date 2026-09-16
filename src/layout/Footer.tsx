@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-3 text-gray-300">
-              <li><a href="#services" className="hover:text-brandBlue-500 transition-colors">Our Services</a></li>
+              <li><a href="#services" className="hover:text-brandBlue-500 transition-colors">Our Service</a></li>
               <li><a href="#process" className="hover:text-brandBlue-500 transition-colors">How It Works</a></li>
               <li><a href="#faq" className="hover:text-brandBlue-500 transition-colors">FAQ</a></li>
             </ul>
