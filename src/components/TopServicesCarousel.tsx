@@ -13,11 +13,11 @@ import imgExpress from '../assets/services/express.jpg';
 const carouselItems = [
   { id: 1, title: 'Drycleaning Services', image: imgDryCleaning, link: '#services' },
   { id: 2, title: 'Laundry Services', image: imgLaundry, link: '#services' },
-  { id: 3, title: 'Ironing & Pressing', image: imgIroning, link: '#services' },
+  { id: 3, title: 'Pressing', image: imgIroning, link: '#services' },
   { id: 4, title: 'Stain & Spot Treatment', image: imgStain, link: '#services' },
   { id: 5, title: 'Household Textile Cleaning', image: imgHousehold, link: '#services' },
   { id: 6, title: 'Shoe & Bag Care', image: imgShoes, link: '#services' },
-  { id: 7, title: 'Specialty Item Care', image: imgSpecialty, link: '#services' },
+  { id: 7, title: 'Specialised Garment Care', image: imgSpecialty, link: '#services' },
   { id: 8, title: 'Commercial Laundry', image: imgCommercial, link: '#services' },
   { id: 9, title: 'Pick-up & Delivery', image: imgDelivery, link: '#services' },
   { id: 10, title: 'Express Service', image: imgExpress, link: '#services' },

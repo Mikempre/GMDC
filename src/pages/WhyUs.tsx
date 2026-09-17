@@ -33,7 +33,7 @@ const reasons = [
   },
   {
     title: "Comprehensive Cleaning & Care",
-    description: "We offer a complete range of fabric-care services, including dry cleaning, laundry, ironing and pressing, stain removal, alterations, and household fabric care.",
+    description: "We offer a complete range of fabric-care services, including dry cleaning, laundry, pressing, stain removal, alterations, and household fabric care.",
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     )

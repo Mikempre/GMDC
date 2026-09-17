@@ -5,7 +5,7 @@ import { SectionTitle } from '../components/SectionTitle';
 const faqs = [
   {
     question: "How long does standard dry cleaning take?",
-    answer: "Our standard turnaround time is 3 days at our Adeyi (Bodija) branch, and 4 days at all other branches. We also offer same-day service exclusively for ironing, while express washing and ironing takes 24 hours."
+    answer: "Our standard turnaround time is 3 days at our Adeyi (Bodija) branch, and 4 days at all other branches. We also offer same-day service exclusively for pressing, while express washing and pressing takes 24 hours."
   },
   {
     question: "Do you offer pickup and delivery?",

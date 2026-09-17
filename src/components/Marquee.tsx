@@ -10,8 +10,8 @@ const tags = [
   "Garment Repairs",
   "Upholstery Cleaning",
   "Eco-Friendly Solvents",
-  "Same-Day Ironing",
-  "24-Hour Wash & Iron",
+  "Same-Day Pressing",
+  "24-Hour Wash & Press",
 ];
 
 export const Marquee: React.FC = () => {

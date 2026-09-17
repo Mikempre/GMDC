@@ -34,7 +34,7 @@ export const Services: React.FC = () => {
       image: imgLaundry
     },
     {
-      title: "Ironing & Pressing Services",
+      title: "Pressing Services",
       description: "Professional finishing to give your clothes a neat, crisp and presentable appearance:",
       bullets: ["Steam Pressing", "Premium Ironing", "Garment Finishing", "Starching", "Special Fabric Pressing"],
       icon: (
@@ -69,7 +69,7 @@ export const Services: React.FC = () => {
       image: imgShoes
     },
     {
-      title: "Specialty & Delicate Item Care",
+      title: "Specialised Garment Care",
       description: "Careful handling of high-value and delicate garments, including:",
       bullets: ["Beaded & Embellished Outfits", "Sequined Garments", "Designer Wear", "Luxury Fabrics", "Wedding & Occasion Wear"],
       icon: (
