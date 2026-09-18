@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
             <div className="text-gray-300 space-y-4">
               <p className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <span><strong>BODIJA OUTLET 1 (ADEYI AVENUE):</strong> 3, Adeyi Avenue, (Opposite Abeni House), Off Awolowo Avenue, Old Bodija, Ibadan<br/><span className="text-sm text-brandBlue-400">Tel: 0818 888 4275, 0802 615 3163</span></span>
+                <span><strong>BODIJA OUTLET 1 (ADEYI AVENUE):</strong> 3, Adeyi Avenue, (Opposite Aweni House), Off Awolowo Avenue, Old Bodija, Ibadan<br/><span className="text-sm text-brandBlue-400">Tel: 0818 888 4275, 0802 615 3163</span></span>
               </p>
               <p className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-brandBlue-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>

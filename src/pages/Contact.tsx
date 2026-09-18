@@ -5,7 +5,7 @@ import { SectionTitle } from '../components/SectionTitle';
 const locations = [
   {
     name: "BODIJA OUTLET 1 (ADEYI AVENUE)",
-    address: "3, Adeyi Avenue, (Opposite Abeni House), Off Awolowo Avenue, Old Bodija, Ibadan",
+    address: "3, Adeyi Avenue, (Opposite Aweni House), Off Awolowo Avenue, Old Bodija, Ibadan",
     phones: ["0818 888 4275", "0802 615 3163"]
   },
   {
