@@ -41,7 +41,7 @@ export const Terms: React.FC<TermsProps> = ({ isOpen, onClose }) => {
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-100 dark:border-brandBlue-700 bg-gray-50 dark:bg-brandBlue-900/50">
-              <h2 className="text-2xl font-serif font-black text-brandBlue-900 dark:text-white">Terms of Service</h2>
+              <h2 className="text-2xl font-serif font-black text-brandBlue-900 dark:text-white">Terms and Conditions of Service</h2>
               <button 
                 onClick={onClose}
                 className="w-10 h-10 rounded-full bg-white dark:bg-brandBlue-800 flex items-center justify-center text-gray-500 hover:text-brandBlue-500 hover:bg-brandBlue-50 dark:hover:bg-brandBlue-500/20 transition-colors shadow-sm"
@@ -53,31 +53,57 @@ export const Terms: React.FC<TermsProps> = ({ isOpen, onClose }) => {
             {/* Content (Scrollable) */}
             <div className="p-6 md:p-8 overflow-y-auto text-gray-600 dark:text-gray-400">
               <div className="mb-8">
-                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">1. Service Quality Guarantee</h3>
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">1. Items Accepted for Cleaning</h3>
                 <p className="leading-relaxed">
-                  Gran Maestro Drycleaners is committed to providing the highest quality of garment care. We use industry-standard processes, eco-friendly solvents, and expert handling. However, we cannot guarantee the removal of all stains or the prevention of inherent fabric weaknesses from showing during the cleaning process.
+                  Gran Maestro Drycleaners shall be responsible only for materials/items that have been officially documented and received by our facility for cleaning and processing.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">2. Care Labels & Liability</h3>
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">2. Collection of Items</h3>
                 <p className="leading-relaxed">
-                  We follow the manufacturer's care instructions on the garment label. If a care label is missing or unreadable, we will process the item using our professional judgment, but we will not be held liable for damage that occurs as a result of improper manufacturing or hidden defects. Liability for any lost or damaged item is limited to 10 times the cleaning charge for that specific item.
+                  Upon collection, customers are required to present their original invoice or valid proof of payment before their items can be released.
                 </p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">3. Pickup & Delivery</h3>
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">3. Colour Run and Fabric Damage</h3>
                 <p className="leading-relaxed">
-                  We offer pickup and delivery services. Customers must ensure that items handed over are properly counted and checked. Any discrepancies in count or claimed damages must be reported within 24 hours of delivery. Gran Maestro is not responsible for items left in garments (e.g., money, jewelry, pens).
+                  Management shall not be held liable for colour runs, shrinkage, or any other damage resulting from weak fibres, poor fabric quality, inferior materials, or inherent defects in the garment.
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">4. Unclaimed Garments</h3>
+              <div className="mb-8">
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">4. Liability for Loss or Damage</h3>
                 <p className="leading-relaxed">
-                  Garments must be picked up or delivery arranged within 30 days of completion. After 90 days, unclaimed garments may be donated to charity to clear our storage facilities, and Gran Maestro will not be held liable for such items.
+                  In the unlikely event of loss of or damage to any material/item accepted by Gran Maestro Drycleaners for cleaning, our liability shall be limited to five (5) times the cost of the cleaning service as stated on the customer's invoice.
                 </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">5. Unclaimed Items</h3>
+                <p className="leading-relaxed">
+                  Management shall not be responsible for any clothing or other items left unclaimed for six (6) weeks after the due/collection date stated on the invoice.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">6. Auction of Unclaimed Items</h3>
+                <p className="leading-relaxed">
+                  Items that remain uncollected for a period exceeding six (6) months from the due/collection date may be disposed of or auctioned by management to recover applicable costs.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-lg font-black text-brandBlue-900 dark:text-white mb-3">7. Customer Verification Upon Collection</h3>
+                <p className="leading-relaxed">
+                  Dear Esteemed Clients, you are advised to carefully check and confirm that all your items are complete and in satisfactory condition before leaving the outlet after collection. Any concern regarding missing or damaged items should be reported to our staff immediately.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-gray-200 dark:border-brandBlue-800">
+                <p className="leading-relaxed font-semibold mb-1">Thank you for choosing Gran Maestro Drycleaners.</p>
+                <p className="italic text-brandBlue-600 dark:text-brandBlue-400">Freshness Redefined.</p>
               </div>
             </div>
           </motion.div>

@@ -53,7 +53,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
         <div className="pt-8 border-t border-brandBlue-800 text-center text-gray-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
           <p>&copy; {new Date().getFullYear()} Gran Maestro Drycleaners. All rights reserved.</p>
           <div className="space-x-4">
-            <button onClick={onOpenTerms} className="hover:text-white transition-colors">Terms of Service</button>
+            <button onClick={onOpenTerms} className="hover:text-white transition-colors">Terms and Conditions of Service</button>
           </div>
         </div>
       </div>
