@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://granmaestrodrycleaners.com/sitemap.xml
+Sitemap: https://www.mygranmaestrodrycleaners.com/sitemap.xml
