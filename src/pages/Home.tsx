@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { TopServicesCarousel } from '../components/TopServicesCarousel';
 import { Hero } from '../sections/Hero';
 import { Marquee } from '../components/Marquee';
 import { Services } from '../sections/Services';
-import { Process } from '../sections/Process';
-import { FAQ } from '../sections/FAQ';
-import { CTA } from '../sections/CTA';
 import { motion } from 'framer-motion';
+
+const Process = lazy(() => import('../sections/Process').then(m => ({ default: m.Process })));
+const FAQ = lazy(() => import('../sections/FAQ').then(m => ({ default: m.FAQ })));
+const CTA = lazy(() => import('../sections/CTA').then(m => ({ default: m.CTA })));
 
 export const Home: React.FC = () => {
   return (
@@ -53,9 +54,11 @@ export const Home: React.FC = () => {
       </section>
 
       <Services />
-      <Process />
-      <FAQ />
-      <CTA />
+      <Suspense fallback={null}>
+        <Process />
+        <FAQ />
+        <CTA />
+      </Suspense>
     </main>
   );
 };

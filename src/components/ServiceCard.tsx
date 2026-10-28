@@ -7,10 +7,11 @@ interface ServiceCardProps {
   bullets?: string[];
   icon?: React.ReactNode;
   image?: string;
+  imageSm?: string;
   dark?: boolean;
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, bullets, icon, image, dark = false }) => {
+export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, bullets, icon, image, imageSm, dark = false }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [10, -10]);
@@ -55,7 +56,9 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, bu
         {image && (
           <div className="w-full h-48 sm:h-56 relative overflow-hidden flex-shrink-0">
             <img 
-              src={image} 
+              src={imageSm || image} 
+              srcSet={imageSm ? `${imageSm} 360w, ${image} 640w` : undefined}
+              sizes="(max-width: 640px) 340px, 400px"
               alt={`${title} - Gran Maestro Drycleaners Ibadan`} 
               width="400" 
               height="224" 

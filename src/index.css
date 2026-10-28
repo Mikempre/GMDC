@@ -50,6 +50,41 @@
   animation-play-state: paused;
 }
 
+/* GPU-Accelerated Infinite Carousel (Zero JS Main-Thread Cost) */
+@keyframes carousel-scroll {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.carousel-track {
+  animation: carousel-scroll 45s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -12px, 0); }
+}
+@keyframes float-slow-reverse {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 12px, 0); }
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+  will-change: transform;
+}
+.animate-float-reverse {
+  animation: float-slow-reverse 6s ease-in-out 1s infinite;
+  will-change: transform;
+}
+
 /* Hide Scrollbar for Snap Carousel */
 .scrollbar-hide {
   -ms-overflow-style: none;

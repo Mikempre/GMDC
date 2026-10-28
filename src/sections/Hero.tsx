@@ -2,17 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
 import heroImage1 from '../assets/hero_image.webp';
+import heroImage1Sm from '../assets/hero_image-sm.webp';
 
 export const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#041333] transition-colors duration-500 pt-8 pb-12">
-      {/* Dynamic Animated Background */}
+      {/* Dynamic Animated Background (Mobile-First Optimized) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-full h-full bg-mesh-light-v2 dark:bg-mesh-dark-v2 opacity-40 dark:opacity-20 mix-blend-multiply dark:mix-blend-screen transition-opacity duration-700"></div>
-        <div className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-gradient-to-br from-brandBlue-400/30 to-brandBlue-600/10 blur-3xl"></div>
-        <div className="absolute top-[40%] -left-[20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] rounded-full bg-gradient-to-tr from-brandBlue-400/20 to-brandBlue-800/10 blur-3xl"></div>
-        <div className="absolute bottom-0 right-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-brandBlue-400/10 blur-3xl"></div>
+        <div className="absolute -top-[20%] -right-[10%] w-[70vw] h-[70vw] max-w-[800px] max-h-[800px] rounded-full bg-gradient-to-br from-brandBlue-400/30 to-brandBlue-600/10 blur-2xl sm:blur-3xl"></div>
+        <div className="hidden sm:block absolute top-[40%] -left-[20%] w-[60vw] h-[60vw] max-w-[600px] max-h-[600px] rounded-full bg-gradient-to-tr from-brandBlue-400/20 to-brandBlue-800/10 blur-3xl"></div>
+        <div className="hidden md:block absolute bottom-0 right-[20%] w-[40vw] h-[40vw] max-w-[400px] max-h-[400px] rounded-full bg-brandBlue-400/10 blur-3xl"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
@@ -113,27 +114,24 @@ export const Hero: React.FC = () => {
 
             {/* Main Image Carousel */}
             <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[2.5rem] shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500 bg-brandBlue-900">
-              <motion.img 
-                src={heroImage1} 
+              <img 
+                src={heroImage1Sm} 
+                srcSet={`${heroImage1Sm} 480w, ${heroImage1} 800w`}
+                sizes="(max-width: 640px) 340px, 448px"
                 alt="Gran Maestro Premium Dry Cleaning and Laundry Services in Ibadan" 
                 width="448"
                 height="560"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-10000" 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brandBlue-900/80 via-transparent to-transparent opacity-60 z-10 pointer-events-none"></div>
             </div>
             
-            {/* Floating elements */}
-            <motion.div 
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-4 sm:-left-12 top-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10"
+            {/* Floating elements (CSS GPU-accelerated floats, zero JS CPU overhead) */}
+            <div 
+              className="absolute -left-4 sm:-left-12 top-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10 animate-float-slow"
             >
               <div className="w-12 h-12 bg-gradient-to-br from-brandBlue-400 to-brandBlue-600 text-white rounded-full flex items-center justify-center shadow-inner">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
@@ -142,12 +140,10 @@ export const Hero: React.FC = () => {
                 <p className="text-sm font-bold text-brandBlue-900 dark:text-white">Spotless Clean</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300 font-medium">100% Guaranteed</p>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              animate={{ y: [0, 15, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-4 sm:-right-8 bottom-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10"
+            <div 
+              className="absolute -right-4 sm:-right-8 bottom-1/4 glass dark:glass-dark p-4 rounded-2xl flex items-center gap-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] z-20 border border-white/40 dark:border-white/10 animate-float-reverse"
             >
                <div className="w-12 h-12 bg-gradient-to-br from-brandBlue-600 to-brandBlue-900 text-brandBlue-400 rounded-full flex items-center justify-center shadow-inner">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -156,7 +152,7 @@ export const Hero: React.FC = () => {
                 <p className="text-sm font-bold text-brandBlue-900 dark:text-white">Fast Turnaround</p>
                 <p className="text-xs text-gray-500 dark:text-gray-300 font-medium">Express Available</p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </motion.div>
 

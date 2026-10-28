@@ -2,6 +2,7 @@ import { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
 import logo from '../assets/logo.webp';
+import logoSm from '../assets/logo-sm.webp';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PriceModal = lazy(() => import('../components/PriceModal').then(m => ({ default: m.PriceModal })));
@@ -66,7 +67,16 @@ export const Header: React.FC = () => {
                 }
               }}
             >
-              <img src={logo} alt="Gran Maestro Drycleaners Logo" width="240" height="96" decoding="async" className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} />
+              <img 
+                src={logoSm} 
+                srcSet={`${logoSm} 180w, ${logo} 280w`}
+                sizes="(max-width: 640px) 140px, 240px"
+                alt="Gran Maestro Drycleaners Logo" 
+                width="240" 
+                height="96" 
+                decoding="async" 
+                className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} 
+              />
             </Link>
           </div>
           

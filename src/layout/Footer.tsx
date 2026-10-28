@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logo from '../assets/logo.webp';
+import logoSm from '../assets/logo-sm.webp';
 
 interface FooterProps {
   onOpenTerms: () => void;
@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTerms }) => {
           
           <div>
             <div className="mb-6 bg-white inline-block p-4 rounded-2xl shadow-lg">
-              <img src={logo} alt="Gran Maestro Drycleaners Logo" width="160" height="96" loading="lazy" decoding="async" className="h-24 w-auto" />
+              <img src={logoSm} alt="Gran Maestro Drycleaners Logo" width="160" height="96" loading="lazy" decoding="async" className="h-24 w-auto" />
             </div>
             <p className="text-brandBlue-300 font-bold tracking-wider text-sm mb-2">RC No. : 1981166</p>
             <p className="text-gray-300 leading-relaxed mb-6">
