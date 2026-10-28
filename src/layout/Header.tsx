@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../components/Button';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PriceModal } from '../components/PriceModal';
+
+const PriceModal = lazy(() => import('../components/PriceModal').then(m => ({ default: m.PriceModal })));
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,7 +66,7 @@ export const Header: React.FC = () => {
                 }
               }}
             >
-              <img src={logo} alt="Gran Maestro Drycleaners Logo" className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} />
+              <img src={logo} alt="Gran Maestro Drycleaners Logo" width="240" height="96" decoding="async" className={`w-auto transition-all duration-500 drop-shadow-md ${isScrolled ? 'h-16 md:h-20' : 'h-28 md:h-36'}`} />
             </Link>
           </div>
           
@@ -221,10 +222,14 @@ export const Header: React.FC = () => {
         )}
       </AnimatePresence>
 
-      <PriceModal 
-        isOpen={isPriceModalOpen} 
-        onClose={() => setIsPriceModalOpen(false)} 
-      />
+      <Suspense fallback={null}>
+        {isPriceModalOpen && (
+          <PriceModal 
+            isOpen={isPriceModalOpen} 
+            onClose={() => setIsPriceModalOpen(false)} 
+          />
+        )}
+      </Suspense>
     </>
   );
 };

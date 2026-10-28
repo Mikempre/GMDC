@@ -6,13 +6,15 @@ interface SectionTitleProps {
   subtitle?: string;
   align?: 'left' | 'center' | 'right';
   dark?: boolean;
+  as?: 'h1' | 'h2';
 }
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ 
   title, 
   subtitle, 
   align = 'center',
-  dark = false
+  dark = false,
+  as: Component = 'h2'
 }) => {
   const alignment = {
     left: 'text-left',
@@ -28,10 +30,10 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
       transition={{ duration: 0.7 }}
       className={`mb-12 ${alignment[align]} max-w-3xl`}
     >
-      <h2 className={`text-4xl md:text-5xl font-serif font-black mb-4 ${dark ? 'text-white' : 'text-brandBlue-900 dark:text-white'} relative inline-block transition-colors`}>
+      <Component className={`text-4xl md:text-5xl font-serif font-black mb-4 ${dark ? 'text-white' : 'text-brandBlue-900 dark:text-white'} relative inline-block transition-colors`}>
         {title}
         <span className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 rounded-full ${dark ? 'bg-brandBlue-500' : 'bg-brandBlue-500'} ${align === 'left' ? 'left-0 transform-none' : ''}`}></span>
-      </h2>
+      </Component>
       {subtitle && (
         <p className={`text-lg mt-6 ${dark ? 'text-gray-300' : 'text-gray-600 dark:text-gray-400'} transition-colors`}>
           {subtitle}

@@ -83,7 +83,7 @@ export const Process: React.FC = () => {
               className="flex items-start gap-6 group"
             >
               {/* Number Circle */}
-              <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-gray-300 dark:border-navy-700 flex items-center justify-center text-3xl md:text-4xl font-light text-gray-400 dark:text-gray-500 group-hover:border-brandRed-500 group-hover:text-brandRed-500 transition-colors duration-300 bg-white dark:bg-navy-900 shadow-sm">
+              <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-gray-300 dark:border-navy-700 flex items-center justify-center text-3xl md:text-4xl font-light text-gray-400 dark:text-gray-500 group-hover:border-brandBlue-500 group-hover:text-brandBlue-500 transition-colors duration-300 bg-white dark:bg-navy-900 shadow-sm">
                 {parseInt(stage.num)}
               </div>
               

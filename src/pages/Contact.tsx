@@ -27,6 +27,7 @@ export const Contact: React.FC = () => {
         <SectionTitle 
           title="Our Contact" 
           subtitle="We are always here to help. Reach out or visit any of our strategically located outlets."
+          as="h1"
         />
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12">

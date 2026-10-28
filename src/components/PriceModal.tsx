@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import priceListImg from '../assets/pricelist.jpg';
+import priceListImg from '../assets/pricelist.webp';
 
 interface PriceModalProps {
   isOpen: boolean;
@@ -41,7 +41,11 @@ export const PriceModal: React.FC<PriceModalProps> = ({ isOpen, onClose }) => {
             <div className="overflow-y-auto p-4 sm:p-8 flex items-center justify-center">
               <img 
                 src={priceListImg} 
-                alt="Gran Maestro Drycleaners Price List" 
+                alt="Gran Maestro Drycleaners Comprehensive Price List Ibadan" 
+                width="672"
+                height="950"
+                loading="lazy"
+                decoding="async"
                 className="w-full max-w-2xl h-auto rounded-xl shadow-md"
               />
             </div>

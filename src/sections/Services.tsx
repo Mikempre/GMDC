@@ -2,16 +2,16 @@ import React from 'react';
 import { SectionTitle } from '../components/SectionTitle';
 import { ServiceCard } from '../components/ServiceCard';
 
-import imgDryCleaning from '../assets/services/drycleaning.jpg';
-import imgLaundry from '../assets/services/laundry.jpg';
-import imgIroning from '../assets/services/ironing.jpg';
-import imgStain from '../assets/services/stain.jpg';
-import imgHousehold from '../assets/services/household.jpg';
-import imgShoes from '../assets/services/shoes.jpg';
-import imgSpecialty from '../assets/services/specialty.jpg';
-import imgCommercial from '../assets/services/commercial.jpg';
-import imgDelivery from '../assets/services/delivery.jpg';
-import imgExpress from '../assets/services/express.jpg';
+import imgDryCleaning from '../assets/services/drycleaning.webp';
+import imgLaundry from '../assets/services/laundry.webp';
+import imgIroning from '../assets/services/ironing.webp';
+import imgStain from '../assets/services/stain.webp';
+import imgHousehold from '../assets/services/household.webp';
+import imgShoes from '../assets/services/shoes.webp';
+import imgSpecialty from '../assets/services/specialty.webp';
+import imgCommercial from '../assets/services/commercial.webp';
+import imgDelivery from '../assets/services/delivery.webp';
+import imgExpress from '../assets/services/express.webp';
 
 export const Services: React.FC = () => {
   const services = [

@@ -54,7 +54,15 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, bu
         
         {image && (
           <div className="w-full h-48 sm:h-56 relative overflow-hidden flex-shrink-0">
-            <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <img 
+              src={image} 
+              alt={`${title} - Gran Maestro Drycleaners Ibadan`} 
+              width="400" 
+              height="224" 
+              loading="lazy" 
+              decoding="async" 
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80"></div>
             {icon && (
               <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center bg-white/20 backdrop-blur-md text-white shadow-lg border border-white/20">

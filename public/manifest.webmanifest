@@ -1,0 +1,17 @@
+{
+  "name": "Gran Maestro Drycleaners",
+  "short_name": "Gran Maestro",
+  "description": "Premium laundry and dry cleaning services in Ibadan with pickup and delivery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0050d2",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

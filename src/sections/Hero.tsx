@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/Button';
-import heroImage1 from '../assets/hero_image.png';
+import heroImage1 from '../assets/hero_image.webp';
 
 export const Hero: React.FC = () => {
 
@@ -115,7 +115,12 @@ export const Hero: React.FC = () => {
             <div className="relative z-10 w-full max-w-md aspect-[4/5] rounded-[2.5rem] shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500 bg-brandBlue-900">
               <motion.img 
                 src={heroImage1} 
-                alt="Gran Maestro Premium Dry Cleaning Process" 
+                alt="Gran Maestro Premium Dry Cleaning and Laundry Services in Ibadan" 
+                width="448"
+                height="560"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}

@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-import imgDryCleaning from '../assets/services/drycleaning.jpg';
-import imgLaundry from '../assets/services/laundry.jpg';
-import imgIroning from '../assets/services/ironing.jpg';
-import imgStain from '../assets/services/stain.jpg';
-import imgHousehold from '../assets/services/household.jpg';
-import imgShoes from '../assets/services/shoes.jpg';
-import imgSpecialty from '../assets/services/specialty.jpg';
-import imgCommercial from '../assets/services/commercial.jpg';
-import imgDelivery from '../assets/services/delivery.jpg';
-import imgExpress from '../assets/services/express.jpg';
+import imgDryCleaning from '../assets/services/drycleaning.webp';
+import imgLaundry from '../assets/services/laundry.webp';
+import imgIroning from '../assets/services/ironing.webp';
+import imgStain from '../assets/services/stain.webp';
+import imgHousehold from '../assets/services/household.webp';
+import imgShoes from '../assets/services/shoes.webp';
+import imgSpecialty from '../assets/services/specialty.webp';
+import imgCommercial from '../assets/services/commercial.webp';
+import imgDelivery from '../assets/services/delivery.webp';
+import imgExpress from '../assets/services/express.webp';
 
 const carouselItems = [
   { id: 1, title: 'Drycleaning Services', image: imgDryCleaning, link: '#services' },
@@ -83,7 +83,11 @@ export const TopServicesCarousel: React.FC = () => {
           >
             <img 
               src={item.image} 
-              alt={item.title} 
+              alt={`${item.title} - Gran Maestro Drycleaners Ibadan`}
+              width="320"
+              height="192"
+              loading={index < 2 ? "eager" : "lazy"}
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
